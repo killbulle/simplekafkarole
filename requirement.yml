@@ -1,0 +1,10 @@
+- src: idealista.prometheus_jmx_exporter-role
+  version: 1.0.0
+  name: prometheus_jmx_exporter
+- src: idealista.zookeeper_role
+  version: 1.5.0
+  name: zookeeper
+- src: http://github.com/idealista/java_role.git
+  scm: git
+  version: 4.1.0
+  name: java

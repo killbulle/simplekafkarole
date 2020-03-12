@@ -1,0 +1,6 @@
+
+[kafka]
+node1 ansible_host=node1 ansible_ssh_host=10.11.0.11 ansible_ssh_port=22 ansible_ssh_user=vagrant ansible_ssh_private_key_file=.vagrant/machines/node1/virtualbox/private_key kafka_broker_rack=rack1
+node2 ansible_host=node2 ansible_ssh_host=10.11.0.12 ansible_ssh_port=22 ansible_ssh_user=vagrant ansible_ssh_private_key_file=.vagrant/machines/node2/virtualbox/private_key kafka_broker_rack=rack2
+node3 ansible_host=node3 ansible_ssh_host=10.11.0.13 ansible_ssh_port=22 ansible_ssh_user=vagrant ansible_ssh_private_key_file=.vagrant/machines/node3/virtualbox/private_key kafka_broker_rack=rack3
+

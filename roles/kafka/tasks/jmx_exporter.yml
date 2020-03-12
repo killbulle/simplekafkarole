@@ -1,0 +1,24 @@
+#- name: JMX_EXPORTER | Download binary
+#  get_url:
+#    url: "{{ jmx_exporter_url }}"
+#    dest: /tmp
+
+
+- name: JMX_EXPORTER | Copy binary
+  copy:
+    src: "{{ kafka_agent_tmp_dir  }}/{{ kafka_agent }}"
+    dest: "{{ kafka_agent_template_path }}/{{ kafka_agent }}"
+    owner: "{{ kafka_user }}"
+    group: "{{ kafka_group }}"
+    #remote_src: true
+    mode: 0755
+  notify: restart kafka
+
+- name: JMX_EXPORTER | Copy exporter config
+  template:
+    src: "{{ kafka_agent_config_template_path }}"
+    dest: "{{ kafka_agent_template_path }}"
+    owner: "{{ kafka_user }}"
+    group: "{{ kafka_group }}"
+    mode: 0640
+  notify: restart kafka
