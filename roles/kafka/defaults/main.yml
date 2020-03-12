@@ -36,9 +36,9 @@ kafka_jvm_performance_opts: ""
 #JMX exporter
 kafka_agent_template_path: "{{ kafka_install_path }}"
 #PASCAL CHANGER VERS LE Jmx export de git pour le jar
-kafka_agent_tmp_dir : /home/marco/devtools/jmx_exporter_json/jmx_prometheus_javaagent/target
-kafka_agent: jmx_prometheus_javaagent_fork-0.11.1-SNAPSHOT.jar
-kafka_agent_config: "{{ kafka_install_path }}/config.json"
+#kafka_agent_tmp_dir : /home/marco/devtools/jmx_exporter_json/jmx_prometheus_javaagent/target
+kafka_agent: jmx_prometheus_javaagent-0.12.0.jar
+kafka_agent_config: "{{ kafka_install_path }}/jmx_config.yml"
 kafka_agent_port: 9110
 kafka_agent_config_template_path: "templates/jmx_exporter/config/jmx_config.yml"
 # Service properties

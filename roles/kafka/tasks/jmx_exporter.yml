@@ -6,7 +6,7 @@
 
 - name: JMX_EXPORTER | Copy binary
   copy:
-    src: "{{ kafka_agent_tmp_dir  }}/{{ kafka_agent }}"
+    src: "{{ kafka_agent }}"
     dest: "{{ kafka_agent_template_path }}/{{ kafka_agent }}"
     owner: "{{ kafka_user }}"
     group: "{{ kafka_group }}"
